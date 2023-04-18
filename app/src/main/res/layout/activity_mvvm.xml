@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--为引入的类从新起一个变量名，方便下面使用-->
+        <variable
+            name="loginViewModel"
+            type="com.scc.mvvm.mvvm.viewmodel.LoginViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_60"
+            android:layout_marginTop="@dimen/dimen_60"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_account"
+                android:textSize="@dimen/text_size_18" />
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_20"
+                android:ellipsize="end"
+                android:hint="@string/str_account_hint"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@={loginViewModel.user.name}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_60"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_password"
+                android:textSize="@dimen/text_size_18" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_20"
+                android:ellipsize="end"
+                android:hint="@string/str_password_hint"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@={loginViewModel.user.password}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/SCCBtnStyle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:onClick="login"
+            android:text="@string/str_login" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/SCCBtnStyle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:onClick="back"
+            android:text="@string/str_back" />
+    </LinearLayout>
+
+</layout>
