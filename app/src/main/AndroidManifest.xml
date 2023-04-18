@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidArchitecturePattern">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.scc.mvvm.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvc.controller.MVCLoginActivity"/>
-        <activity android:name=".mvp.view.MVPLoginActivity"/>
-        <activity android:name=".mvvm.view.MVVMLoginActivity"/>
+
+        <activity android:name="com.scc.mvvm.mvc.controller.MVCLoginActivity" />
+        <activity android:name="com.scc.mvvm.mvp.view.MVPLoginActivity" />
+        <activity android:name="com.scc.mvvm.mvvm.view.MVVMLoginActivity" />
     </application>
 
 </manifest>

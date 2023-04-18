@@ -1,9 +1,8 @@
 package com.scc.mvvm.mvvm.model;
 
-import com.scc.architecture.BR;
-
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
+import androidx.databinding.library.baseAdapters.BR;
 
 /**
  * 创建时间：2021/8/16

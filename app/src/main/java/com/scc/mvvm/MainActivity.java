@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.scc.architecture.databinding.ActivityMainBinding;
+import com.bill.mvvm.R;
+import com.bill.mvvm.databinding.ActivityMainBinding;
 import com.scc.mvvm.mvc.controller.MVCLoginActivity;
 import com.scc.mvvm.mvp.view.MVPLoginActivity;
 import com.scc.mvvm.mvvm.view.MVVMLoginActivity;
